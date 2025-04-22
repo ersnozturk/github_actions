@@ -1,4 +1,4 @@
-name: Test self-hosted runner
+name: Devops2 My Devops
 
 on: [push]
 
@@ -10,3 +10,13 @@ jobs:
         uses: actions/checkout@v3
       - name: Run a script
         run: echo "Runner çalışıyor!"
+
+  check-hostname:
+    runs-on: self-hosted
+    steps:
+      - name: Show Hostname
+        run: hostname
+      - name: Show IP Address
+        run: ip addr show
+      - name: Check for custom file
+        run: cat ~/ersin/benim-runner.txt || echo "Dosya yok!"
