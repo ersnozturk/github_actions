@@ -19,4 +19,4 @@ jobs:
       - name: Show IP Address
         run: ip addr show
       - name: Check for custom file
-        run: cat ~/ersin/benim-runner.txt || echo "Dosya yok!"
+        run: cat ~/ersin/test.txt || echo "Dosya yok!"
